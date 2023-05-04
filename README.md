@@ -1,2 +1,2 @@
-# zig-learning
+# Zig Learning
 Study of the zig language
