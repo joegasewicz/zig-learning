@@ -31,11 +31,20 @@ pub fn main() !void {
     optional_value = "hi";
     assert(optional_value != null);
 
-    print("\noptional 2\nntype: {}\nvalue: {?s}\n", .{
+    print("\noptional 2\ntype: {}\nvalue: {?s}\n", .{
         @TypeOf(optional_value), optional_value,
     });
 
     // error union
     var number_or_error: anyerror!i32 = error.ArgNotFound;
 
+    print("\nerror union 1\ntype: {}\nvalue: {!}\n", .{
+       @TypeOf(number_or_error), number_or_error,
+    });
+
+    number_or_error = 1234;
+
+    print("\nerror union 2\ntype: {}\nvalue: {!}\n", .{
+        @TypeOf(number_or_error), number_or_error,
+    });
 }
