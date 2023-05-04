@@ -13,4 +13,15 @@ pub fn main() void {
     print("{}\n", .{mem.eql(u8, "hello", "h\x65llo")});
     print("0x{x}\n", .{"\xff"[0]});
     print("{u}\n", .{'⚡'});
+
+    const hello_world_in_c =
+        \\ #include <stdio.h>
+        \\
+        \\ int main(int argc, char **argv) {
+        \\     prinf("hello world\n");
+        \\     return 0;
+        \\ }
+    ;
+
+    print("C: {s}\n", .{hello_world_in_c});
 }
