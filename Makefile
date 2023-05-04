@@ -1,3 +1,3 @@
 clean:
 	$(RM) *.o
-	ls | grep -v "\." | xargs rm
+	$(RM) string_literals
