@@ -4,3 +4,4 @@ clean:
 	$(RM) assignment
 	$(RM) zig_test
 	$(RM) container_zig
+	$(RM) variables
